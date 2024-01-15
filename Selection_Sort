@@ -1,0 +1,43 @@
+import java .util.*;
+public class Selection_Sort {
+    public static void main(String[] args){
+        int[] arr = new int[] {100,90,80,70,60,50,40,30,20,10} ;
+        System.out.println("Array before sorting be ");
+        for (int i = 0; i<arr.length ; i++ ){
+            System.out.print(arr[i] + " ");
+        }
+           int temp = 0  ;
+        int temp1 ;
+        int x = 0;
+        for(int i = 0; i<arr.length-2; i++){
+            temp = 0 ;
+            temp1 = 0;
+            x = 0;
+            temp =  arr[i+1]  ;
+            x = i+1 ;
+            for(int j = i+1 ;j<arr.length;j++ ){
+
+                if(temp > arr[j]){
+                    temp = arr[j] ;
+                    x = j ;
+                }
+
+               //System.out.println(temp);
+            }
+
+            if(arr[i] >temp){
+              temp1 = arr[i] ;
+               arr[i] = temp ;
+              arr[x] = temp1 ;
+
+           }
+        }
+        System.out.println();
+        System.out.println("Array after sorting be ") ;
+        for (int z = 0; z<arr.length ; z++ ){
+            System.out.print(arr[z] + " ");
+        }
+
+
+    }
+}
